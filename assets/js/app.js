@@ -5,7 +5,12 @@
 
   $('#btn-add-user').click(function(event){
   	event.preventDefault()
-  	console.log('ADD USER: ')
+    var user = {
+      name: $('#user-name').val(),
+      email: $('#user-email').val()
+    }
+
+  	console.log('ADD USER: '+JSON.stringify(user))
   })
 
 })()
