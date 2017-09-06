@@ -3,4 +3,9 @@
 
   console.log('HELLO REC LEAGUE!')
 
+  $('#btn-add-user').click(function(event){
+  	event.preventDefault()
+  	console.log('ADD USER: ')
+  })
+
 })()
