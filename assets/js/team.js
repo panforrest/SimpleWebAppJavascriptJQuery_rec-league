@@ -12,7 +12,7 @@
 
   var turbo = Turbo({site_id: '59afc034bca7290011590d56'})
 
-  turbo.fetch('team', {}, function(err, data){
+  turbo.fetch('team', {name: teamName}, function(err, data){
   	if(err){
   	  alert('Error: '+err.message)
   	  return
