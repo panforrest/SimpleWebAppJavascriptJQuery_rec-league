@@ -10,4 +10,16 @@
   var teamName = parts[1]
   console.log('HELLO! TEAM Page: '+teamName) //console.log('HELLO! TEAM Page: '+window.location.href)
 
+  var turbo = Turbo({site_id: '59afc034bca7290011590d56'})
+
+  turbo.fetch('team', {}, function(err, data){
+  	if(err){
+  	  alert('Error: '+err.message)
+  	  return
+  	}
+
+    console.log('TEAM: '+JSON.stringify(data))
+
+  })
+
 })()
