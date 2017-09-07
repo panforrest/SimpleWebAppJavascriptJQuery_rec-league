@@ -9,7 +9,7 @@
   	  return
   	}
 
-  	console.log('CURRENT USERS: '+JSON.stringify(data))
+  	// console.log('CURRENT USERS: '+JSON.stringify(data))
   	var users = data.results
 
   	var list = ''
@@ -18,6 +18,25 @@
   	})
 
   	$('#current-user-list').html(list)
+  })
+
+  $('#btn-add-team').click(function(event){
+  	event.preventDefault()
+  	var team = {
+  	  name: $('#team-name').val(),
+  	  city: $('#team-city').val()
+  	}
+
+  	console.log('ADD TEAM: '+JSON.stringify(team))
+
+  	turbo.create('team', team, function(err, data){  //turbo.createTeam(team, function(err, data){
+  	  if(err){
+  	  	alert('Error: '+err.message)
+  	  	return
+  	  }
+
+  	  console.log('TEAM CREATED: '+JSON.stringify(data))
+  	})
   })
 
   $('#btn-add-user').click(function(event){
