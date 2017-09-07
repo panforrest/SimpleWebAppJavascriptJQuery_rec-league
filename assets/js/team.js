@@ -25,14 +25,15 @@
 
     console.log('TEAM: '+JSON.stringify(data))
 
-    var team = data.results
+   //  var team = data.results
 
-  	var list = ''
-  	team.forEach(function(team, i){
-  	  list += '<li>'+team.name+'</li>'
-  	})
+  	// var list = ''
+  	// team.forEach(function(team, i){
+  	//   list += '<li>'+team.name+'</li>'
+  	// })
+  	var team = data.results[0]
 
-  	$('#current-team').html(list)
+  	$('#current-team').html(team.name)
 
   })
 
