@@ -18,7 +18,21 @@
   	  return
   	}
 
+  	if (data.results.length == 0){ //team not found
+      alert('Error: Team not found.')
+      return
+  	}
+
     console.log('TEAM: '+JSON.stringify(data))
+
+    var team = data.results
+
+  	var list = ''
+  	team.forEach(function(team, i){
+  	  list += '<li>'+team.name+'</li>'
+  	})
+
+  	$('#current-team').html(list)
 
   })
 
