@@ -36,6 +36,7 @@
   	  }
 
   	  console.log('TEAM CREATED: '+JSON.stringify(data))
+      window.location.href = '/team#'+data.result.name
   	})
   })
 

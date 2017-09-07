@@ -24,7 +24,8 @@
   },
   "deploy": [
     "index.html",
-    "dist"
+    "dist",
+    "team.html"
   ],
   "app": "59afc034bca7290011590d56"
 }
